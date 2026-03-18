@@ -3,7 +3,20 @@ data:
   processed_path: "data/processed/processed.csv"
   test_size: 0.2
   random_state: 42
-  target_column: "target"
+  target_column: "P6_13" # Capacidad de pago mensual
+  regions:
+    - 1 # Región Norte
+    - 2 # Región Centro - Norte
+  
+  columns:
+    - "ENT" # Entidad federativa
+    - "REGION" # Región
+    - "EDAD_V" # Edad del individuo
+    - "P5_19" # Salario Mensual del individuo
+    - "P5_19A" # Período en el que recibe su salario
+    - "P5_21" # Gastos mensuales
+    - "P6_12" # Capacidad de endeudamiento mensual
+    - "P6_13" # Target: Capacidad de pago mensual
 
 features:
   scaling: true
