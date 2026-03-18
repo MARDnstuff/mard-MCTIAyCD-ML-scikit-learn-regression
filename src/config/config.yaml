@@ -1,0 +1,44 @@
+data:
+  raw_path: "data/raw/dataset_tmodulo_ensafi_2023.csv"
+  processed_path: "data/processed/processed.csv"
+  test_size: 0.2
+  random_state: 42
+  target_column: "target"
+
+features:
+  scaling: true
+  encoding: false   # cambia a true si tienes categóricas
+
+models:
+  linear_regression:
+    enabled: true
+    params: {}
+
+  random_forest:
+    enabled: true
+    params:
+      n_estimators: 100
+      max_depth: 10
+      random_state: 42
+
+  support_vector_regressor:
+    enabled: true
+    params:
+      kernel: "rbf"
+      C: 1.0
+      epsilon: 0.1
+
+training:
+  cv_folds: 5
+  scoring: "neg_mean_squared_error"
+  shuffle: true
+
+evaluation:
+  metrics:
+    - rmse
+    - mae
+    - r2
+
+output:
+  metrics_path: "reports/metrics.json"
+  figures_path: "reports/figures/"
