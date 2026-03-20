@@ -3,6 +3,7 @@ from src.utils.config_loader import load_config
 from src.data.extract import extract_data
 from src.data.transform import transform_data
 from src.data.load import load_data
+from src.models.train import train
 import logging
 
 
@@ -23,6 +24,10 @@ def main():
 
     # Load
     load_data(df_clean, config["data"]["processed_path"])
+
+    # Train
+    train(df_clean)
+
 
 
 if __name__ == "__main__":

@@ -12,10 +12,10 @@ data:
     - "ENT" # Entidad federativa
     - "REGION" # Región
     - "EDAD_V" # Edad del individuo
-    - "P5_19" # Salario Mensual del individuo
+    - "P5_19" # Ingreso del individuo
     - "P5_19A" # Período en el que recibe su salario
     - "P5_21" # Gastos mensuales
-    - "P6_12" # Capacidad de endeudamiento mensual
+    - "P6_12" # Capacidad de endeudamiento
     - "P6_13" # Target: Capacidad de pago mensual
 
 features:
