@@ -4,6 +4,7 @@ data:
   test_size: 0.2
   random_state: 42
   target_column: "P6_13" # Capacidad de pago mensual
+  
   regions:
     - 1 # Región Norte
     - 2 # Región Centro - Norte
